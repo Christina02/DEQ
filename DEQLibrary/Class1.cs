@@ -135,7 +135,13 @@ namespace DEQLibrary
         //Есть ли данный элемент в Деке
         public static bool Contains(T data)
         {
-            
+            DoublyNode<T> current = head;
+            while (current != null)
+            {
+                if (current.Data.Equals(data))
+                    return true;
+                current = current.Next;
+            }
             return false;
         }
 
