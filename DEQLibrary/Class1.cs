@@ -78,10 +78,22 @@ namespace DEQLibrary
         }
 
         //удаление последнего
-        public static int RemoveLast()
+        public static T RemoveLast()
         {
-            
-            return 0;
+            if (count == 0)
+                throw new InvalidOperationException();
+            T output = tail.Data;
+            if (count == 1)
+            {
+                head = tail = null;
+            }
+            else
+            {
+                tail = tail.Previous;
+                tail.Next = null;
+            }
+            count--;
+            return output;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
