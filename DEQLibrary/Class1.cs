@@ -45,7 +45,17 @@ namespace DEQLibrary
         //добавление в конец
         public static void AddLast(T data)
         {
-            
+            DoublyNode<T> node = new DoublyNode<T>(data);
+
+            if (head == null)
+                head = node;
+            else
+            {
+                tail.Next = node;
+                node.Previous = tail;
+            }
+            tail = node;
+            count++;
         }
 
 
