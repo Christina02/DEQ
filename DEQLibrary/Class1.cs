@@ -105,7 +105,9 @@ namespace DEQLibrary
         //очистить Дек
         public static void Clear()
         {
-            
+            head = null;
+            tail = null;
+            count = 0;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
