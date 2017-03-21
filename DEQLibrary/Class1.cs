@@ -99,6 +99,9 @@ namespace DEQLibrary
         //количество элементов
         public static int Count { get { return count; } }
 
+        //Пустой?
+        public static int IsEmpty { get { return -1; } }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return ((IEnumerable)this).GetEnumerator();

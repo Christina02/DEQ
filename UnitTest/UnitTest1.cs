@@ -94,5 +94,19 @@ namespace UnitTest
             //assert
             Assert.AreEqual(expectedCount, actualCount);
         }
+
+        //Тест удаление последнего элемента
+        [TestMethod]
+        public void TestIsEmpty()
+        {
+            //arrange
+            bool expectedEmpty = Deque<int>.count==0;
+
+            //act
+            int actualEmpty = Deque<int>.IsEmpty;
+
+            //assert
+            Assert.AreEqual(expectedEmpty, actualEmpty);
+        }
     }
 }
