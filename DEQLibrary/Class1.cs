@@ -24,9 +24,18 @@ namespace DEQLibrary
 
     public class Deque<T> : IEnumerable<T>  // двусвязный список
     {
-        DoublyNode<T> head; // головной/первый элемент
-        DoublyNode<T> tail; // последний/хвостовой элемент
-        int count;  // количество элементов в списке
+        public static DoublyNode<T> head; // головной/первый элемент
+        public static DoublyNode<T> tail; // последний/хвостовой элемент
+        public static int count;  // количество элементов в списке
+
+
+        public static void AddFirst(T data)
+        {
+
+        }
+
+
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return ((IEnumerable)this).GetEnumerator();

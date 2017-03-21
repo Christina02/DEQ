@@ -1,0 +1,5 @@
+C:\Users\Кристина\Documents\Visual Studio 2015\Projects\DEQLibrary\DEQ\DEQLibrary\bin\Debug\DEQLibrary.dll
+C:\Users\Кристина\Documents\Visual Studio 2015\Projects\DEQLibrary\DEQ\DEQLibrary\bin\Debug\DEQLibrary.pdb
+C:\Users\Кристина\Documents\Visual Studio 2015\Projects\DEQLibrary\DEQ\DEQLibrary\obj\Debug\DEQLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Кристина\Documents\Visual Studio 2015\Projects\DEQLibrary\DEQ\DEQLibrary\obj\Debug\DEQLibrary.dll
+C:\Users\Кристина\Documents\Visual Studio 2015\Projects\DEQLibrary\DEQ\DEQLibrary\obj\Debug\DEQLibrary.pdb
