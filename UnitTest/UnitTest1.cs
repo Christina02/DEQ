@@ -13,11 +13,11 @@ namespace UnitTest
             //arrange
             int data = 127;
             int expectedCount = DEQLibrary.Deque<int>.count+1;
-            DEQLibrary.DoublyNode<int> expectedHead;
-            DEQLibrary.DoublyNode<int> actualHead = new DEQLibrary.DoublyNode<int>(data);
+            DEQLibrary.DoublyNode<int> expectedHead = new DEQLibrary.DoublyNode<int>(data);
+
             //act
             DEQLibrary.Deque<int>.AddFirst(data);
-            expectedHead = DEQLibrary.Deque<int>.head;
+            DEQLibrary.DoublyNode<int> actualHead = DEQLibrary.Deque<int>.head;
             int actualCount = DEQLibrary.Deque<int>.count;
 
             //assert
@@ -25,7 +25,26 @@ namespace UnitTest
             Assert.AreEqual(expectedHead.Data, actualHead.Data);
             Assert.AreEqual(expectedCount, actualCount);
         }
-            
-            
+
+        //Тест добавление элемента в конец
+        [TestMethod]
+        public void TestAddLast()
+        {
+            //arrange
+            int data = 365;
+            int expectedCount = DEQLibrary.Deque<int>.count + 1;
+            DEQLibrary.DoublyNode<int> expectedTail = new DEQLibrary.DoublyNode<int>(data);
+
+            //act
+            DEQLibrary.Deque<int>.AddLast(data);
+            DEQLibrary.DoublyNode<int>  actualTail = DEQLibrary.Deque<int>.tail;
+            int actualCount = DEQLibrary.Deque<int>.count;
+
+            //assert
+
+            Assert.AreEqual(expectedTail.Data, actualTail.Data);
+            Assert.AreEqual(expectedCount, actualCount);
+        }
+
     }
 }

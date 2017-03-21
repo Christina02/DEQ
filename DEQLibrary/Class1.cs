@@ -28,7 +28,7 @@ namespace DEQLibrary
         public static DoublyNode<T> tail; // последний/хвостовой элемент
         public static int count;  // количество элементов в списке
 
-
+        //добавление в начало
         public static void AddFirst(T data)
         {
             DoublyNode<T> node = new DoublyNode<T>(data);
@@ -42,6 +42,11 @@ namespace DEQLibrary
             count++;
         }
 
+        //добавление в конец
+        public static void AddLast(T data)
+        {
+            
+        }
 
 
         IEnumerator IEnumerable.GetEnumerator()
