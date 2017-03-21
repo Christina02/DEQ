@@ -61,5 +61,22 @@ namespace UnitTest
             Assert.AreEqual(expectedHead.Data, actualHead);
             Assert.AreEqual(expectedCount, actualCount);
         }
+
+        //Тест удаление последнего элемента
+        [TestMethod]
+        public void TestRemoveLast()
+        {
+            //arrange
+            int expectedCount = DEQLibrary.Deque<int>.count - 1;
+            DEQLibrary.DoublyNode<int> expectedHead = DEQLibrary.Deque<int>.tail;
+
+            //act
+            int actualHead = DEQLibrary.Deque<int>.RemoveLast();
+            int actualCount = DEQLibrary.Deque<int>.count;
+
+            //assert
+            Assert.AreEqual(expectedHead.Data, actualHead);
+            Assert.AreEqual(expectedCount, actualCount);
+        }
     }
 }

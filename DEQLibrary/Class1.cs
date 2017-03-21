@@ -77,6 +77,13 @@ namespace DEQLibrary
             return output;
         }
 
+        //удаление последнего
+        public static int RemoveLast()
+        {
+            
+            return 0;
+        }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return ((IEnumerable)this).GetEnumerator();
