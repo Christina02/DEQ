@@ -81,7 +81,7 @@ namespace UnitTest
             Assert.AreEqual(expectedCount, actualCount);
         }
 
-        //Тест удаление последнего элемента
+        //Тест количество
         [TestMethod]
         public void TestCount()
         {
@@ -95,7 +95,7 @@ namespace UnitTest
             Assert.AreEqual(expectedCount, actualCount);
         }
 
-        //Тест удаление последнего элемента
+        //Тест пустой
         [TestMethod]
         public void TestIsEmpty()
         {
@@ -135,16 +135,14 @@ namespace UnitTest
         {
 
             //arrange
-            Deque<int>.AddFirst(1);
+            if(Deque<int>.IsEmpty) Deque<int>.AddFirst(1);
             var expected = Deque<int>.head.Data;
             int count = Deque<int>.count;
 
             //act
-            
             var actual = Deque<int>.First;
-            var err = new InvalidOperationException();
-            //assert
-            
+
+            //assert  
             Assert.AreEqual(expected, actual);
         }
 
@@ -154,15 +152,14 @@ namespace UnitTest
         {
 
             //arrange
-            Deque<int>.AddLast(1);
+            if (Deque<int>.IsEmpty) Deque<int>.AddLast(1);
             var expected = Deque<int>.tail.Data;
             int count = Deque<int>.count;
 
             //act
-
             var actual = Deque<int>.Last;
-            //assert
 
+            //assert
             Assert.AreEqual(expected, actual);
         }
 
