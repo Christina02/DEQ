@@ -45,21 +45,5 @@ namespace UnitTest
             Assert.AreEqual(expectedCount, actualCount);
         }
 
-        //Тест удаление первого элемента
-        [TestMethod]
-        public void TestRemoveFirst()
-        {
-            //arrange
-            int expectedCount = DEQLibrary.Deque<int>.count - 1;
-            DEQLibrary.DoublyNode<int> expectedHead = DEQLibrary.Deque<int>.head;
-
-            //act
-            int actualHead=DEQLibrary.Deque<int>.RemoveFirst();
-            int actualCount = DEQLibrary.Deque<int>.count;
-
-            //assert
-            Assert.AreEqual(expectedHead.Data, actualHead);
-            Assert.AreEqual(expectedCount, actualCount);
-        }
     }
 }

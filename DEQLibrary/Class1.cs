@@ -58,24 +58,6 @@ namespace DEQLibrary
             count++;
         }
 
-        //удаление первого
-        public static T RemoveFirst()
-        {
-            if (count == 0)
-                throw new InvalidOperationException();
-            T output = head.Data;
-            if (count == 1)
-            {
-                head = tail = null;
-            }
-            else
-            {
-                head = head.Next;
-                head.Previous = null;
-            }
-            count--;
-            return output;
-        }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
