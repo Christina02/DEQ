@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
+using DEQLibrary;
 
 namespace UnitTest
 {
@@ -12,13 +14,13 @@ namespace UnitTest
         {
             //arrange
             int data = 127;
-            int expectedCount = DEQLibrary.Deque<int>.count+1;
-            DEQLibrary.DoublyNode<int> expectedHead = new DEQLibrary.DoublyNode<int>(data);
+            int expectedCount = Deque<int>.count+1;
+            DoublyNode<int> expectedHead = new DoublyNode<int>(data);
 
             //act
-            DEQLibrary.Deque<int>.AddFirst(data);
-            DEQLibrary.DoublyNode<int> actualHead = DEQLibrary.Deque<int>.head;
-            int actualCount = DEQLibrary.Deque<int>.count;
+            Deque<int>.AddFirst(data);
+            DoublyNode<int> actualHead = Deque<int>.head;
+            int actualCount = Deque<int>.count;
 
             //assert
             
@@ -32,13 +34,13 @@ namespace UnitTest
         {
             //arrange
             int data = 365;
-            int expectedCount = DEQLibrary.Deque<int>.count + 1;
-            DEQLibrary.DoublyNode<int> expectedTail = new DEQLibrary.DoublyNode<int>(data);
+            int expectedCount = Deque<int>.count + 1;
+            DoublyNode<int> expectedTail = new DoublyNode<int>(data);
 
             //act
-            DEQLibrary.Deque<int>.AddLast(data);
-            DEQLibrary.DoublyNode<int>  actualTail = DEQLibrary.Deque<int>.tail;
-            int actualCount = DEQLibrary.Deque<int>.count;
+            Deque<int>.AddLast(data);
+            DoublyNode<int> actualTail = Deque<int>.tail;
+            int actualCount = Deque<int>.count;
 
             //assert
             Assert.AreEqual(expectedTail.Data, actualTail.Data);
@@ -50,12 +52,12 @@ namespace UnitTest
         public void TestRemoveFirst()
         {
             //arrange
-            int expectedCount = DEQLibrary.Deque<int>.count - 1;
-            DEQLibrary.DoublyNode<int> expectedHead = DEQLibrary.Deque<int>.head;
+            int expectedCount = Deque<int>.count - 1;
+            DoublyNode<int> expectedHead = Deque<int>.head;
 
             //act
-            int actualHead=DEQLibrary.Deque<int>.RemoveFirst();
-            int actualCount = DEQLibrary.Deque<int>.count;
+            int actualHead= Deque<int>.RemoveFirst();
+            int actualCount = Deque<int>.count;
 
             //assert
             Assert.AreEqual(expectedHead.Data, actualHead);
@@ -67,12 +69,12 @@ namespace UnitTest
         public void TestRemoveLast()
         {
             //arrange
-            int expectedCount = DEQLibrary.Deque<int>.count - 1;
-            DEQLibrary.DoublyNode<int> expectedHead = DEQLibrary.Deque<int>.tail;
+            int expectedCount = Deque<int>.count - 1;
+            DoublyNode<int> expectedHead = Deque<int>.tail;
 
             //act
-            int actualHead = DEQLibrary.Deque<int>.RemoveLast();
-            int actualCount = DEQLibrary.Deque<int>.count;
+            int actualHead = Deque<int>.RemoveLast();
+            int actualCount = Deque<int>.count;
 
             //assert
             Assert.AreEqual(expectedHead.Data, actualHead);
@@ -84,10 +86,10 @@ namespace UnitTest
         public void TestCount()
         {
             //arrange
-            int expectedCount = DEQLibrary.Deque<int>.count;
+            int expectedCount = Deque<int>.count;
 
             //act
-            int actualCount = DEQLibrary.Deque<int>.Count;
+            int actualCount = Deque<int>.Count;
 
             //assert
             Assert.AreEqual(expectedCount, actualCount);
