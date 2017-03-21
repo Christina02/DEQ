@@ -102,6 +102,12 @@ namespace DEQLibrary
         //Пустой?
         public static bool IsEmpty { get { return count == 0; } }
 
+        //очистить Дек
+        public static void Clear()
+        {
+            
+        }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return ((IEnumerable)this).GetEnumerator();

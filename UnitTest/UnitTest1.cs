@@ -108,5 +108,27 @@ namespace UnitTest
             //assert
             Assert.AreEqual(expectedEmpty, actualEmpty);
         }
+
+        //Тест очистка
+        [TestMethod]
+        public void TestClear()
+        {
+            //arrange
+            int expectedCount = 0;
+            DoublyNode<int> expectedHead = null;
+            DoublyNode<int>  expectedTail = null;
+
+            //act
+            Deque<int>.AddFirst(0);
+            Deque<int>.Clear();
+            int actualCount = Deque<int>.count;
+            DoublyNode<int>  actualHead = Deque<int>.head;
+            DoublyNode<int> actualTail = Deque<int>.tail;
+
+            //assert
+            Assert.AreEqual(expectedCount, actualCount);
+            Assert.AreEqual(expectedHead, actualHead);
+            Assert.AreEqual(expectedTail, actualTail);
+        }
     }
 }
