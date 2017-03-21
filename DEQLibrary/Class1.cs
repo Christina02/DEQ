@@ -111,12 +111,13 @@ namespace DEQLibrary
         }
 
         //Получение данных первого элемента
-        public static int First
+        public static T First
         {
             get
             {
-                
-                return -1;
+                if (IsEmpty)
+                    throw new InvalidOperationException();
+                return head.Data;
             }
         }
 

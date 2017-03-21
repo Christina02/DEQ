@@ -13,7 +13,7 @@ namespace UnitTest
         public void TestAddFirst()
         {
             //arrange
-            int data = 127;
+            var data = 127;
             int expectedCount = Deque<int>.count+1;
             DoublyNode<int> expectedHead = new DoublyNode<int>(data);
 
@@ -33,7 +33,7 @@ namespace UnitTest
         public void TestAddLast()
         {
             //arrange
-            int data = 365;
+            var data = 365;
             int expectedCount = Deque<int>.count + 1;
             DoublyNode<int> expectedTail = new DoublyNode<int>(data);
 
@@ -115,8 +115,6 @@ namespace UnitTest
         {
             //arrange
             int expectedCount = 0;
-            DoublyNode<int> expectedHead = null;
-            DoublyNode<int>  expectedTail = null;
 
             //act
             Deque<int>.AddFirst(0);
@@ -127,21 +125,26 @@ namespace UnitTest
 
             //assert
             Assert.AreEqual(expectedCount, actualCount);
-            Assert.AreEqual(expectedHead, actualHead);
-            Assert.AreEqual(expectedTail, actualTail);
+            Assert.IsNull(actualHead);
+            Assert.IsNull( actualTail);
         }
 
         //Тест получение первого элемента
         [TestMethod]
         public void TestFirst()
         {
+
             //arrange
-            int expected = Deque<int>.head.Data;
+            Deque<int>.AddFirst(1);
+            var expected = Deque<int>.head.Data;
+            int count = Deque<int>.count;
 
             //act
-            int actual = Deque<int>.First;
-
+            
+            var actual = Deque<int>.First;
+            var err = new InvalidOperationException();
             //assert
+            
             Assert.AreEqual(expected, actual);
         }
     }
