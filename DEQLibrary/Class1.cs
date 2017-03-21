@@ -58,6 +58,12 @@ namespace DEQLibrary
             count++;
         }
 
+        //удаление первого
+        public static int RemoveFirst()
+        {
+            
+            return 0;
+        }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
