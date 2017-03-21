@@ -96,6 +96,9 @@ namespace DEQLibrary
             return output;
         }
 
+        //количество элементов
+        public static int Count { get { return -1; } }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return ((IEnumerable)this).GetEnumerator();
