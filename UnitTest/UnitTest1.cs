@@ -161,10 +161,32 @@ namespace UnitTest
             //act
 
             var actual = Deque<int>.Last;
-            var err = new InvalidOperationException();
             //assert
 
             Assert.AreEqual(expected, actual);
+        }
+
+        //Тест поиск элемента
+        [TestMethod]
+        public void TestContains()
+        {
+
+            //arrange
+            var data = 190;
+            var data2 = 270;
+            bool expected = true;
+            bool expected2 = false;
+            Deque<int>.Clear();
+            Deque<int>.AddLast(data);
+
+            //act
+
+            var actual = Deque<int>.Contains(data);
+            var actual2 = Deque<int>.Contains(data2);
+            //assert
+
+            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected2, actual2);
         }
     }
 }

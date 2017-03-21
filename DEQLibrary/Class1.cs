@@ -132,6 +132,13 @@ namespace DEQLibrary
             }
         }
 
+        //Есть ли данный элемент в Деке
+        public static bool Contains(T data)
+        {
+            
+            return false;
+        }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return ((IEnumerable)this).GetEnumerator();
