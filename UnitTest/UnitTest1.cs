@@ -147,5 +147,24 @@ namespace UnitTest
             
             Assert.AreEqual(expected, actual);
         }
+
+        //Тест получение первого элемента
+        [TestMethod]
+        public void TestLast()
+        {
+
+            //arrange
+            Deque<int>.AddLast(1);
+            var expected = Deque<int>.tail.Data;
+            int count = Deque<int>.count;
+
+            //act
+
+            var actual = Deque<int>.Last;
+            var err = new InvalidOperationException();
+            //assert
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

@@ -121,6 +121,16 @@ namespace DEQLibrary
             }
         }
 
+        //Получение данных последнего элемента
+        public static int Last
+        {
+            get
+            {
+                
+                return -1;
+            }
+        }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return ((IEnumerable)this).GetEnumerator();
