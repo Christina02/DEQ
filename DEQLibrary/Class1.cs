@@ -31,7 +31,15 @@ namespace DEQLibrary
 
         public static void AddFirst(T data)
         {
-
+            DoublyNode<T> node = new DoublyNode<T>(data);
+            DoublyNode<T> temp = head;
+            node.Next = temp;
+            head = node;
+            if (count == 0)
+                tail = head;
+            else
+                temp.Previous = node;
+            count++;
         }
 
 
