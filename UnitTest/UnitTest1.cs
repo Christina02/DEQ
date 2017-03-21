@@ -130,5 +130,19 @@ namespace UnitTest
             Assert.AreEqual(expectedHead, actualHead);
             Assert.AreEqual(expectedTail, actualTail);
         }
+
+        //Тест получение первого элемента
+        [TestMethod]
+        public void TestFirst()
+        {
+            //arrange
+            int expected = Deque<int>.head.Data;
+
+            //act
+            int actual = Deque<int>.First;
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

@@ -110,6 +110,16 @@ namespace DEQLibrary
             count = 0;
         }
 
+        //Получение данных первого элемента
+        public static int First
+        {
+            get
+            {
+                
+                return -1;
+            }
+        }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return ((IEnumerable)this).GetEnumerator();
