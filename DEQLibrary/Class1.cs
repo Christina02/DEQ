@@ -122,12 +122,13 @@ namespace DEQLibrary
         }
 
         //Получение данных последнего элемента
-        public static int Last
+        public static T Last
         {
             get
             {
-                
-                return -1;
+                if (IsEmpty)
+                    throw new InvalidOperationException();
+                return tail.Data;
             }
         }
 
