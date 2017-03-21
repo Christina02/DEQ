@@ -21,8 +21,11 @@ namespace UnitTest
             int actualCount = DEQLibrary.Deque<int>.count;
 
             //assert
-            Assert.AreEqual(expectedHead, actualHead);
+            
+            Assert.AreEqual(expectedHead.Data, actualHead.Data);
             Assert.AreEqual(expectedCount, actualCount);
         }
+            
+            
     }
 }
